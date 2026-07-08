@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rugby Injury Info</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+  }
+  h1 {
+    text-align: center;
+  }
+  /* Injury cards container in one row with horizontal scrolling if needed */
+  .injury-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  /* Individual cards styling with greenish colors */
+  .injury-card {
+    background-color: #d0f0c0; /* light greenish */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    min-width: 250px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  .injury-card:hover {
+    transform: translateY(-5px);
+  }
+  .card-header {
+    padding: 15px;
+    background-color: #4CAF50; /* vibrant green for header */
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    opacity: 0;
+    padding: 0 15px;
+  }
+  /* Show content on hover of the card */
+  .injury-card:hover .card-content {
+    max-height: 2000px;
+    opacity: 1;
+    padding: 15px;
+  }
+  /* Style for the detailed section about fractures */
+  .injury-info {
+    margin-top: 30px;
+    background-color: #a8d5a8; /* soft green background */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  /* Heading for injury info */
+  .injury-info h2 {
+    margin-top: 0;
+  }
+</style>
+</head>
+<body>
+<h1>Rugby Injury Prevention & Recovery</h1>
+
+<!-- Injury Cards Section -->
+<div class="injury-cards">
+  <!-- Fractures Card -->
+  <div class="injury-card">
+    <div class="card-header">Fractures</div>
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Heavy tackles and collisions</li>
+        <li>Falling awkwardly on the field</li>
+        <li>Being hit by equipment or opponents</li>
+        <li>Twisting injuries</li>
+        <li>Overuse stress fractures</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Wear protective gear (helmets, padding)</li>
+        <li>Build bone strength via nutrition and training</li>
+        <li>Use proper techniques during tackles</li>
+        <li>Maintain good playing surfaces</li>
+        <li>Avoid overtraining and ensure rest</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Immobilization and rest</li>
+        <li>Ice to reduce swelling</li>
+        <li>Physiotherapy for mobility</li>
+        <li>Surgical repair if severe</li>
+        <li>Gradual return to activity</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Dislocations Card -->
+  <div class="injury-card">
+    <div class="card-header">Dislocations</div>
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Heavy impact during tackles</li>
+        <li>Falling on an outstretched arm</li>
+        <li>Sudden twisting forces</li>
+        <li>Collision with other players</li>
+        <li>Overextension of joints</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Strengthen muscles around vulnerable joints</li>
+        <li>Use proper protective gear</li>
+        <li>Practice safe fall techniques</li>
+        <li>Ensure good joint stability training</li>
+        <li>Warm-up properly before play</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Immediate immobilization and reduction</li>
+        <li>Ice and rest</li>
+        <li>Pain management</li>
+        <li>Physiotherapy for stability</li>
+        <li>Gradual reintroduction of activity</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Sprains Card -->
+  <div class="injury-card">
+    <div class="card-header">Sprains</div>
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Twisting joints during play</li>
+        <li>Impact during tackles</li>
+        <li>Landing awkwardly</li>
+        <li>Sudden direction changes</li>
+        <li>Playing on uneven surfaces</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Strengthen muscles around joints</li>
+        <li>Use supportive gear</li>
+        <li>Warm-up and stretch</li>
+        <li>Avoid sudden untrained movements</li>
+        <li>Maintain good flexibility</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Rest and immobilization</li>
+        <li>Ice to reduce swelling</li>
+        <li>Compression and elevation</li>
+        <li>Physiotherapy for stability</li>
+        <li>Gradual return to activity</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Muscle Strains Card -->
+  <div class="injury-card">
+    <div class="card-header">Muscle Strains</div>
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Sudden acceleration or deceleration</li>
+        <li>Overstretching during play</li>
+        <li>Poor conditioning</li>
+        <li>Lack of warm-up</li>
+        <li>Repetitive muscle stress</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Proper warm-up and stretching</li>
+        <li>Muscle strengthening exercises</li>
+        <li>Maintain flexibility</li>
+        <li>Avoid overexertion</li>
+        <li>Include rest days</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Rest and gentle stretching</li>
+        <li>Ice therapy</li>
+        <li>Compression</li>
+        <li>Elevation</li>
+        <li>Physiotherapy for recovery</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Additional info about Fractures -->
+<div class="injury-info" id="fracture-section">
+  <h2>About Sport</h2>
+
+  <p> Rugby is a physically demanding team sport played with an oval-shaped ball. Two teams of 15 players (in rugby union) or 13 players (in rugby league) compete to carry, pass, or kick the ball to score points by grounding it in the opponent’s in-goal area or kicking it through goalposts. The game features intense contact, strategic plays, and teamwork, making it one of the most popular and rugged sports worldwide. </p>
+  
+
+<a href="index.html">Back to Home</a>
+</body>
+</html>

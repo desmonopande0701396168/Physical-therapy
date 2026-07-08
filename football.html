@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Football Injury Info</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+  }
+  h1 {
+    text-align: center;
+  }
+  section {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  h2 {
+    margin-top: 0;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007BFF;
+  }
+  /* Injury cards container in one row */
+  .injury-cards {
+    display: flex;
+    flex-wrap: nowrap; /* arrange in one row without wrapping */
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    overflow-x: auto; /* allow scrolling if needed */
+  }
+  /* Individual cards styling */
+  .injury-card {
+    background-color: #a8d5ba; /* greenish color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    min-width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  .injury-card:hover {
+    transform: translateY(-5px);
+  }
+  .card-header {
+    padding: 15px;
+    background-color: #5ea58e; /* darker green for header */
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    opacity: 0;
+    padding: 0 15px;
+  }
+  /* Show content on hover of the card */
+  .injury-card:hover .card-content {
+    max-height: 1000px; /* large enough to contain content */
+    opacity: 1;
+    padding: 15px;
+  }
+
+  /* Style for the detailed section about fractures */
+  .fracture-info {
+    margin-top: 30px;
+    background-color: #e0f7e9; /* light green background for info */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  /* Heading for fracture info */
+  .fracture-info h2 {
+    margin-top: 0;
+  }
+
+
+</style>
+</head>
+<body>
+<h1>Football Injury Prevention & Recovery</h1>           
+
+<!-- Injury Cards Section arranged in one row -->
+
+<div class="injury-cards">
+  <!-- Fractures Card -->
+  <div class="injury-card">
+    <div class="card-header">Fractures</div>
+    <img src="go1.png" alt="Icon" width="50" height="50" />
+    <div class="card-content">
+      <h3>Causes:</h3>
+
+      <ul>
+        <li>Impact from tackles or collisions</li>
+        <li>Falling awkwardly onto the ground</li>
+        <li>Being struck by equipment or objects</li>
+        <li>Sudden twisting or bending of bones</li>
+        <li>Overuse or stress fractures from repetitive impact</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Wear appropriate protective gear (helmets, pads)</li>
+        <li>Strengthen bones through proper nutrition and weight training</li>
+        <li>Use correct techniques during tackles and falls</li>
+        <li>Ensure playing surfaces are even and safe</li>
+        <li>Avoid overtraining and allow adequate rest</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Immobilization with casts or splints</li>
+        <li>Rest and avoiding weight-bearing activities</li>
+        <li>Ice therapy to reduce swelling</li>
+        <li>Physiotherapy to regain strength and mobility</li>
+        <li>Surgical intervention if the fracture is severe</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Dislocations Card -->
+  <div class="injury-card">
+    <div class="card-header">Dislocations</div>
+    <img src="go1.png" alt="Icon" width="50" height="50" />
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Sudden impact or collision during play</li>
+        <li>Falling on an outstretched arm or hand</li>
+        <li>Twisting injuries during rapid movements</li>
+        <li>Forceful contact with another player</li>
+        <li>Overextension of joints beyond their normal range</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Strengthen muscles around vulnerable joints</li>
+        <li>Use protective equipment properly</li>
+        <li>Practice proper falling techniques</li>
+        <li>Improve joint stability through training</li>
+        <li>Warm-up thoroughly before activity</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Immediate immobilization and medical reduction</li>
+        <li>Rest and ice to minimize swelling</li>
+        <li>Pain management with medication</li>
+        <li>Physiotherapy for joint stability and strength</li>
+        <li>Gradual return to activity with supervised exercises</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Strains Card -->
+  <div class="injury-card">
+    <div class="card-header">Strains</div>
+    <img src="go1.png" alt="Icon" width="50" height="50" />
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Sudden acceleration or deceleration movements</li>
+        <li>Overstretching during intense activity</li>
+        <li>Poor conditioning or fatigue</li>
+        <li>Lack of warm-up before activity</li>
+        <li>Repetitive stress on muscles</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Warm-up and stretch thoroughly before play</li>
+        <li>Strengthen muscles through conditioning exercises</li>
+        <li>Maintain good flexibility</li>
+        <li>Avoid overexerting muscles during play</li>
+        <li>Incorporate rest days into training</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Rest and avoid strenuous activity</li>
+        <li>Ice application to reduce pain and swelling</li>
+        <li>Compression bandages for support</li>
+        <li>Elevation of the injured limb</li>
+        <li>Physiotherapy for muscle recovery and flexibility</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Sprains Card -->
+  <div class="injury-card">
+    <div class="card-header">Sprains</div>
+    <img src="go1.png" alt="Icon" width="50" height="50" />
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Twisting or rolling a joint unexpectedly</li>
+        <li>Collision or impact during tackles</li>
+        <li>Landing awkwardly from jumps</li>
+        <li>Rapid direction changes</li>
+        <li>Uneven or slippery playing surfaces</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Strengthen muscles around joints</li>
+        <li>Use proper footwear for grip and support</li>
+        <li>Warm-up and stretch before activity</li>
+        <li>Avoid sudden, untrained movements</li>
+        <li>Use supportive taping or braces if prone to injury</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Rest and immobilize the joint</li>
+        <li>Ice the area to reduce swelling</li>
+        <li>Compression with bandages or braces</li>
+        <li>Elevate the injured joint</li>
+        <li>Physiotherapy to regain strength and stability</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Detailed info about Fractures -->
+<div class="fracture-info" id="fracture-section">
+  <h2>About Sport</h2>
+
+  <p> Football, also known as soccer in some countries, is a widely popular team sport played with a spherical ball. Two teams of eleven players compete to score goals by kicking the ball into the opposing team’s net. The game is played on a rectangular field with goalposts at each end, and it emphasizes teamwork, strategy, agility, and skill. Football is enjoyed worldwide and is the most popular sport in many countries, with major events like the FIFA World Cup drawing millions of fans. </p>
+  
+
+
+<a href="index.html">Back to Home</a>
+</body>
+</html>

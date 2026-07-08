@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Swimming Injury Prevention & Recovery</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+  }
+  h1 {
+    text-align: center;
+  }
+  section {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  h2 {
+    margin-top: 0;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007BFF;
+  }
+  /* Injury cards container in one row */
+  .injury-cards {
+    display: flex;
+    flex-wrap: nowrap; /* arrange in one row without wrapping */
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    overflow-x: auto; /* allow scrolling if needed */
+  }
+  /* Individual cards styling */
+  .injury-card {
+    background-color: #a8d5ba; /* greenish color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    min-width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  .injury-card:hover {
+    transform: translateY(-5px);
+  }
+  .card-header {
+    padding: 15px;
+    background-color: #5ea58e; /* darker green for header */
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    opacity: 0;
+    padding: 0 15px;
+  }
+  /* Show content on hover of the card */
+  .injury-card:hover .card-content {
+    max-height: 1000px; /* large enough to contain content */
+    opacity: 1;
+    padding: 15px;
+  }
+  /* Style for the detailed section about injuries */
+  .injury-info {
+    margin-top: 30px;
+    background-color: #e0f7e9; /* light green background for info */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  /* Heading for injury info */
+  .injury-info h2 {
+    margin-top: 0;
+  }
+</style>
+</head>
+<body>
+<h1>Swimming Injury Prevention & Recovery</h1>
+
+
+
+<!-- Injury Cards Section arranged in one row -->
+
+<div class="injury-cards">
+  <!-- Shoulder Impingement Card -->
+  <div class="injury-card">
+    <div class="card-header">Shoulder Impingement</div>
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Repetitive overhead arm movements</li>
+        <li>Poor technique leading to shoulder strain</li>
+        <li>Weak rotator cuff muscles</li>
+        <li>Overtraining without adequate rest</li>
+        <li>Inadequate warm-up before swimming</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Strengthen shoulder stabilizing muscles</li>
+        <li>Use proper swimming techniques</li>
+        <li>Include shoulder mobility exercises</li>
+        <li>Avoid overtraining</li>
+        <li>Warm-up thoroughly before swimming</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Rest and ice therapy</li>
+        <li>Physical therapy focusing on shoulder mobility</li>
+        <li>Stretching and strengthening exercises</li>
+        <li>Medical intervention if necessary</li>
+        <li>Gradual return to swimming activities</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Swimmer's Knee Card -->
+  <div class="injury-card">
+    <div class="card-header">Swimmer's Knee</div>
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Repetitive knee bending and kicking</li>
+        <li>Poor technique increasing knee strain</li>
+        <li>Overuse during training</li>
+        <li>Muscle imbalances around the knee</li>
+        <li>Inadequate stretching before swimming</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Strengthen leg muscles, especially quadriceps and hamstrings</li>
+        <li>Use proper kicking techniques</li>
+        <li>Increase training gradually</li>
+        <li>Warm-up and stretch before swimming</li>
+        <li>Maintain good flexibility around the knee</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Rest and ice application</li>
+        <li>Physical therapy for knee stabilization</li>
+        <li>Stretching and strengthening exercises</li>
+        <li>Use of knee braces if needed</li>
+        <li>Gradual return to swimming</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Lower Back Pain Card -->
+  <div class="injury-card">
+    <div class="card-header">Lower Back Pain</div>
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Repetitive twisting and back extension</li>
+        <li>Poor technique leading to strain</li>
+        <li>Muscle imbalances</li>
+        <li>Overtraining</li>
+        <li>Inadequate core strength</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Strengthen core muscles</li>
+        <li>Practice proper technique</li>
+        <li>Increase flexibility through stretching</li>
+        <li>Gradually increase training intensity</li>
+        <li>Ensure adequate rest</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Rest and ice</li>
+        <li>Physical therapy focused on core stability</li>
+        <li>Stretching and strengthening exercises</li>
+        <li>Use of supports if necessary</li>
+        <li>Gradual return to swimming</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Detailed info about Injuries -->
+<div class="injury-info" id="injury-section">
+  <h2>About Sport</h2>
+
+  <p> Swimming is a popular aquatic sport and essential life skill that involves moving through water using various strokes such as freestyle, backstroke, breaststroke, and butterfly. It is both a recreational activity and a competitive sport, with events held in pools and open water. Swimming promotes physical fitness, endurance, and coordination, and is enjoyed by people of all ages around the world. </p>
+
+<a href="index.html">Back to Home</a>
+</body>
+</html>

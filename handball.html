@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Handball Injury Info</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+  }
+  h1 {
+    text-align: center;
+  }
+  section {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  h2 {
+    margin-top: 0;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #007BFF;
+  }
+  /* Injury cards container in one row */
+  .injury-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  /* Individual cards styling */
+  .injury-card {
+    background-color: #a8d5ba;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    min-width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  .injury-card:hover {
+    transform: translateY(-5px);
+  }
+  .card-header {
+    padding: 15px;
+    background-color: #5ea58e;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .card-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    opacity: 0;
+    padding: 0 15px;
+  }
+  /* Show content on hover of the card */
+  .injury-card:hover .card-content {
+    max-height: 1000px;
+    opacity: 1;
+    padding: 15px;
+  }
+  /* Style for the detailed section about fractures */
+  .fracture-info {
+    margin-top: 30px;
+    background-color: #e0f7e9;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  /* Heading for fracture info */
+  .fracture-info h2 {
+    margin-top: 0;
+  }
+</style>
+</head>
+<body>
+<h1>Handball Injury Prevention & Recovery</h1>
+
+<!-- Injury Cards Section arranged in one row -->
+<div class="injury-cards">
+  <!-- Fractures Card -->
+  <div class="injury-card">
+    <div class="card-header">Fractures</div>
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Impact from collisions or falls</li>
+        <li>Being hit by the ball or equipment</li>
+        <li>Falls onto hard surfaces</li>
+        <li>Twisting injuries</li>
+        <li>Overuse stress fractures</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Wear protective gear like padded gloves or guards</li>
+        <li>Ensure proper technique during play</li>
+        <li>Use appropriate footwear for grip and support</li>
+        <li>Maintain good physical conditioning</li>
+        <li>Avoid playing on unsafe surfaces</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Immobilization with casts or splints</li>
+        <li>Rest and avoiding stress on the injury</li>
+        <li>Icing to reduce swelling</li>
+        <li>Physiotherapy for strength rebuilding</li>
+        <li>Surgical intervention if necessary</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Dislocations Card -->
+  <div class="injury-card">
+    <div class="card-header">Dislocations</div>
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Sudden impact or collision</li>
+        <li>Falling awkwardly</li>
+        <li>Twisting or hyperextending joints</li>
+        <li>Forceful contact with another player</li>
+        <li>Overextension during jumps or dives</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Strengthen muscles around joints</li>
+        <li>Use protective gear</li>
+        <li>Practice proper falling techniques</li>
+        <li>Warm-up thoroughly before games</li>
+        <li>Maintain good flexibility</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Immediate immobilization and medical reduction</li>
+        <li>Rest and ice application</li>
+        <li>Pain management</li>
+        <li>Physiotherapy for joint stability</li>
+        <li>Gradual return to activity with supervised exercises</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Strains Card -->
+  <div class="injury-card">
+    <div class="card-header">Strains</div>
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Sudden acceleration or deceleration</li>
+        <li>Overstretching or overexertion</li>
+        <li>Poor conditioning</li>
+        <li>Inadequate warm-up</li>
+        <li>Repetitive stress</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Warm-up and stretch</li>
+        <li>Strengthen muscles</li>
+        <li>Maintain flexibility</li>
+        <li>Progress gradually in training</li>
+        <li>Rest adequately between sessions</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Rest and ice</li>
+        <li>Compression and elevation</li>
+        <li>Physiotherapy</li>
+        <li>Gradual stretching and strengthening</li>
+        <li>Use of support braces if needed</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Sprains Card -->
+  <div class="injury-card">
+    <div class="card-header">Sprains</div>
+    <div class="card-content">
+      <h3>Causes:</h3>
+      <ul>
+        <li>Twisting or rolling joints</li>
+        <li>Impact during collisions</li>
+        <li>Landing awkwardly</li>
+        <li>SUDDEN movements</li>
+        <li>Playing on uneven surfaces</li>
+      </ul>
+      <h3>Preventions:</h3>
+      <ul>
+        <li>Strengthen surrounding muscles</li>
+        <li>Use supportive gear</li>
+        <li>Proper warm-up and stretching</li>
+        <li>Avoid sudden untrained motions</li>
+        <li>Use taping or braces if prone</li>
+      </ul>
+      <h3>Recovery Methods:</h3>
+      <ul>
+        <li>Rest and immobilize</li>
+        <li>Ice the area</li>
+        <li>Compression bandages</li>
+        <li>Elevation</li>
+        <li>Physiotherapy</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Detailed info about Fractures -->
+<div class="fracture-info" id="fracture-section">
+  <h2>About Sport</h2>
+
+  <p> Handball is a fast-paced team sport where two teams of seven players each aim to score goals by throwing a ball into the opposing team’s net. Played mainly indoors, players use their hands to pass, dribble, and shoot the ball, while trying to outmaneuver defenders. The game emphasizes speed, agility, and teamwork, and is popular worldwide, especially in Europe. </p>
+  
+
+<a href="index.html">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,408 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   NEW FONT SYSTEM
+========================= */
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: black; /* Default text color to white on dark background */
+  background-color: #f8fbf8; /* default background, overridden below for other pages */
+}
+
+/* Change background color for all pages except homepage and contact page */
+body:not(.homepage):not(.contactpage) {
+  background-color: #dbd5d5; /* black background */
+  color: #fff; /* white text for all content */
+}
+
+/* Add specific style for About Us page */
+body.about-us {
+  background-color: #000; /* black background for About Us page */
+  color: #fff; /* white text */
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #ffffff; /* default color for headings */
+}
+
+/* Different colors for headings on non-home/contact pages */
+body:not(.homepage):not(.contactpage) h1,
+body:not(.homepage):not(.contactpage) h2,
+body:not(.homepage):not(.contactpage) h3 {
+  color: #ffcc00; /* bright color for headings on dark background */
+}
+
+/* Headings on homepage and contact page */
+body.homepage h1,
+body.homepage h2,
+body.homepage h3,
+body.contactpage h1,
+body.contactpage h2,
+body.contactpage h3 {
+  color: inherit;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #66cccc; /* bright cyan for links */
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================
+   COLORS
+========================= */
+:root {
+  --deep-teal: #006666;
+  --light-teal: #66cccc;
+  --White-: #White;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  padding: 8px 12px;
+  transition: 0.3s;
+  color: #000; /* default link color */
+}
+
+.nav-links li a:hover {
+  background: var(--light-teal);
+  border-radius: 4px;
+}
+
+/* Menu toggle for mobile */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+  padding: 50px 20px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--lime-green);
+  color: greenyellow;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* =========================
+   ABOUT US SLIDESHOW (FIXED)
+========================= */
+.about-image {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.about-image .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.about-image .slide.active {
+  opacity: 1;
+}
+
+/* =========================
+   ABOUT US TEXT STYLING
+========================= */
+
+/* =========================
+   HEADINGS (e.g., h1, h2, h3) */
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+/* Ensure headings are in different colors on non-home/contact pages */
+body:not(.homepage):not(.contactpage) h1,
+body:not(.homepage):not(.contactpage) h2,
+body:not(.homepage):not(.contactpage) h3 {
+  color: #ffcc00; /* bright color for headings on dark background */
+}
+
+/* For the homepage and contact page, keep default heading colors or specify */
+body.homepage h1,
+body.homepage h2,
+body.homepage h3,
+body.contactpage h1,
+body.contactpage h2,
+body.contactpage h3 {
+  color: inherit;
+}
+
+/* =========================
+   ABOUT US TEXT
+========================= */
+.about-section p {
+  color: #f0f0f0; /* light text for paragraphs, adjust if needed */
+  font-weight: 200;
+}
+
+/* =========================
+   GRID
+========================= */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: none;
+  color: Bold black; /* white text in inputs on dark background */
+}
+
+/* =========================
+   INJURY COLLAPSIBLE
+========================= */
+.injury-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.injury-content.active {
+  max-height: 2000px;
+  padding: 10px;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap; /* allows responsiveness */
+  gap: 20px; /* space between text and images */
+  align-items: flex-start; /* aligns items at the top */
+}
+
+.about-text {
+  flex: 1; /* takes available space */
+  min-width: 300px; /* ensures responsiveness */
+}
+
+.about-images {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Container for the card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Adjust spacing as needed */
+  margin: 20px 0; /* Optional margin around the grid */
+}
+
+/* Style for each card with black shadow added */
+.card {
+  background-color: #fff; /* Or your background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.1), /* existing subtle shadow */
+    0 0 10px rgba(0, 0, 0, 0.7); /* black glow behind for depth */
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: #000; /* default text color for cards, change if needed */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 8px 16px rgba(0, 0, 0, 0.2), /* hover shadow */
+    0 0 15px rgba(0, 0, 0, 0.8); /* enhanced glow on hover */
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #333; /* or other color */
+}
+
+.card p {
+  font-size: 0.95em;
+  text-align: center;
+  color: #555; /* or your preferred color */
+}
+
+/* Container for each card with hover reveal */
+.card-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  color: #000; /* default text color */
+}
+
+/* The visible part of the card (title and arrow) */
+.card {
+  padding: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Arrow indicator */
+.arrow-down {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Hidden content that appears on hover */
+.card-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0 20px;
+  background-color: #f9f9f9;
+}
+
+/* When hovering over the wrapper, reveal the hidden content and rotate arrow */
+.card-wrapper:hover .card-info {
+  max-height: 200px; /* adjust as needed for content size */
+  padding: 10px 20px;
+}
+
+.card-wrapper:hover .arrow-down {
+  transform: rotate(180deg);
+}
