@@ -9,19 +9,20 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet"/>
 <style>
-  /* CSS for background slideshow in hero */
-@keyframes slideBackground {
-  0% { background-image: url('jpg.1.jpg'); }
-  50% { background-image: url('jpg.15.jpg'); }
-  75% { background-image: url('jpg.003.jpg'); }
-  80% { background-image: url('jpg002.jpg'); }
-  90% { background-image: url('opande22.jpg.'); }
-  100% { background-image: url('jpg.1980.png'); }
-}
+  /* Existing CSS */
+  @keyframes slideBackground {
+    0% { background-image: url('jpg.1.jpg'); }
+    16.66% { background-image: url('jpg.15.jpg'); }
+    33.33% { background-image: url('jpg.003.jpg'); }
+    50% { background-image: url('jpg002.jpg'); }
+    66.66% { background-image: url('opande22.jpg.'); }
+    83.33% { background-image: url('jpg.1980.png'); }
+    100% { background-image: url('jpg.1.jpg'); }
+  }
+
   body {
     margin: 0;
-    font-family: 'flex', flex;
-    --deep-teal:transparent;
+    font-family: 'Montserrat', sans-serif;
   }
 
   /* Styles for header */
@@ -57,7 +58,7 @@
     height: 100vh;
     background-size: cover;
     background-position: center;
-    animation: slideBackground 10s;
+    animation: slideBackground 10s infinite;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,9 +85,9 @@
   .btn {
     display: inline-block;
     padding: 12px 25px;
-    background-color: var(--deep-teal);
+    background-color: transparent; /* Will override with CSS variable if needed */
     color: #fff;
-    text-decoration: flex;
+    text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
   }
@@ -98,10 +99,34 @@
   h2 {
     text-align: center;
     margin-bottom: 20px;
-    color: var(--deep-teal);
+    color: #2c3e50;
   }
 
-  /* Clean up for responsiveness if needed */
+  /* About Us Image Slider Styles */
+  .about-image {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  .about-image .slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+  }
+  .about-image .slide.active {
+    opacity: 1;
+  }
+
+  /* Responsive adjustments */
   @media(max-width:768px){
     nav ul {
       flex-direction: column;
@@ -115,35 +140,39 @@
 <!-- Header -->
 <header>
   <div class="nav-container">
-   <div class="logo">
-  
+    <div class="logo">
+      <!-- You can add logo here if needed -->
     </div>
     <nav>
       <ul>
- <li><a href="index.html">Home</a></li>
-
- <li><a href="about.html">About Us</a></li>
-
- <li><a href="services main page.html">Services main page</a></li>
-
-  <li><a href="contact.html">Contact Us</a></li>
- </ul>
-   </nav>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services main page.html">Services main page</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
 <!-- Hero Section with background slideshow -->
 <section class="hero">
   <div class="hero-overlay">
-
     <h1>Our Path to Wellness Starts Here</h1>
     <p>Expert Physiotherapy & Sports Injury Recovery</p>
   </div>
 </section>
 
-<!-- Add other sections if needed, e.g., About, Services, etc. -->
+<!-- About Us Image Slider -->
+<section>
+  <div class="about-image">
+    <img src="img1.jpg" class="slide active" />
+    <img src="img2.jpg" class="slide" />
+    <img src="img3.jpg" class="slide" />
+    <!-- Add more images if needed -->
+  </div>
+</section>
 
-<!-- Example: About Us Preview -->
+<!-- Welcome/About Us Text -->
 <section>
   <h2>Welcome to Physio-Center</h2>
   <p style="max-width:800px; margin:auto; text-align:center;">
@@ -164,7 +193,7 @@
       <h3>Quick Links</h3>
       <ul style="list-style:none; padding:0;">
         <li><a href="about.html" style="color:#fff;">About Us</a></li>
-         <li><a href="services main page.html">Services main page</a></li>
+        <li><a href="services main page.html">Services main page</a></li>
         <li><a href="contact.html" style="color:#fff;">Contact Us</a></li>
       </ul>
     </div>
@@ -176,10 +205,35 @@
       </form>
     </div>
   </div>
-  <div style="text-align:center; padding:10px; background-color:lightsteelblue";>
+  <div style="text-align:center; padding:10px; background-color:lightsteelblue;">
     <p>&copy; 2026 Physiotherapy & Sports Injury Center. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- Scripts -->
+<script>
+  // JavaScript for mobile menu toggle (if you add a menu toggle button)
+  // const menuToggle = document.querySelector('.menu-toggle');
+  // const navLinks = document.querySelector('nav ul');
+  // if (menuToggle && navLinks) {
+  //   menuToggle.addEventListener('click', () => {
+  //     navLinks.classList.toggle('show');
+  //   });
+  // }
+
+  // About Us slideshow setup
+  document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.about-image .slide');
+    if (slides.length > 0) {
+      let current = 0;
+      setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 3000); // Change slide every 3 seconds
+    }
+  });
+</script>
 
 </body>
 </html>
