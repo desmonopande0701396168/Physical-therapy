@@ -1,142 +1,593 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Contact Us - Physiotherapy & Sports Injury Center</title>
-    <!-- Font Awesome and Google Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
-    <!-- Favicon -->
-    <link rel="icon" href="logo.jpg" type="image/jpeg" />
-    <style>
-        /* CSS Reset and base styles */
-        * { box-sizing: border-box; }
-        body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        
-        /* Typography */
-        h1, h2, h3 { color: black; margin: 0; }
-        p { color: #333; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        /* Navigation styles */
-        .header-container { display: flex; align-items: center; justify-content: space-between; padding: 15px 20px; background-color: #dcdcdc; box-shadow: 0 4px 8px rgba(0,0,0,0.1); flex-wrap: wrap; }
-        .site-logo { width: 80px; height: auto; margin-right: 10px; }
-        .navbar { display: flex; }
-        .nav-links { list-style: none; display: flex; justify-content: center; margin: 0; padding: 0; gap: 20px; }
-        .nav-links a { color: gray; text-decoration: none; font-weight: 600; font-family: 'Arial', sans-serif; padding: 8px 12px; border-radius: 4px; transition: background-color 0.3s, color 0.3s; }
-        .nav-links a:hover { background-color: #575757; color: white; }
+<title>Contact Us - Physiotherapy & Sports Injury Center</title>
 
-        /* Main Content */
-        .dashboard-main { background-color: #cceeff; margin-top: 20px; padding: 50px 20px; }
-        .dashboard-main h2 { color: #009999; text-align: center; margin-bottom: 30px; }
-        .content-wrapper { max-width: 1000px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; }
-        .content-wrapper > div { flex: 1 1 300px; }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
-        /* Forms */
-        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; font-family: inherit; }
-        .contact-form button { padding: 12px 20px; background-color: #009999; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: background 0.3s; }
-        .contact-form button:hover { background-color: #007777; }
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
 
-        /* Footer */
-        footer { background-color: #222; color: white; margin-top: 20px; }
-        .footer-container { max-width: 1000px; margin: auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 40px 20px; gap: 20px; }
-        .footer-info, .footer-links, .newsletter { flex: 1 1 250px; }
-        .footer-info h3, .footer-links h3, .newsletter h3 { color: white; margin-bottom: 15px; border-bottom: 2px solid #009999; padding-bottom: 8px; width: fit-content; }
-        .footer-info p, .footer-links a { color: #ddd; text-decoration: none; line-height: 1.8; }
-        .footer-links ul { list-style: none; padding-left: 0; margin: 0; }
-        .footer-links li { margin-bottom: 8px; }
-        .newsletter input { padding: 10px; width: 70%; border: none; border-radius: 4px 0 0 4px; }
-        .newsletter button { padding: 10px; background-color: #009999; color: white; border: none; border-radius: 0 4px 4px 0; cursor: pointer; }
-        .footer-bottom { background-color: #111; padding: 15px; text-align: center; color: #aaa; font-size: 0.9em; }
-    </style>
+<link rel="icon" href="logo.jpg" type="image/jpeg" />
+
+
+<style>
+
+* { 
+box-sizing:border-box; 
+}
+
+body { 
+font-family:'Open Sans',sans-serif; 
+margin:0; 
+padding:0; 
+background:#f4f4f4; 
+}
+
+
+h1,h2,h3{
+color:black;
+margin:0;
+}
+
+p{
+color:#333;
+}
+
+
+/* HEADER */
+
+.header-container{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:15px 20px;
+background:#dcdcdc;
+box-shadow:0 4px 8px rgba(0,0,0,.1);
+flex-wrap:wrap;
+
+}
+
+
+.site-logo{
+
+width:80px;
+height:auto;
+margin-right:10px;
+
+}
+
+
+.navbar{
+display:flex;
+}
+
+
+.nav-links{
+
+list-style:none;
+display:flex;
+gap:20px;
+margin:0;
+padding:0;
+
+}
+
+
+.nav-links a{
+
+color:gray;
+text-decoration:none;
+font-weight:600;
+font-family:Arial,sans-serif;
+padding:8px 12px;
+border-radius:4px;
+transition:.3s;
+
+}
+
+
+.nav-links a:hover{
+
+background:#575757;
+color:white;
+
+}
+
+
+/* MAIN */
+
+.dashboard-main{
+
+background:#cceeff;
+margin-top:20px;
+padding:50px 20px;
+
+}
+
+
+.dashboard-main h2{
+
+color:#009999;
+text-align:center;
+margin-bottom:30px;
+
+}
+
+
+.content-wrapper{
+
+max-width:1000px;
+margin:auto;
+display:flex;
+flex-wrap:wrap;
+gap:40px;
+
+}
+
+
+.content-wrapper > div{
+
+flex:1 1 300px;
+
+}
+
+
+/* FORM */
+
+.contact-form input,
+.contact-form textarea{
+
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+font-family:inherit;
+
+}
+
+
+.contact-form button{
+
+padding:12px 20px;
+background:#009999;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+
+}
+
+
+.contact-form button:hover{
+
+background:#007777;
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+background:#222;
+color:white;
+margin-top:20px;
+
+}
+
+
+.footer-container{
+
+max-width:1000px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+padding:40px 20px;
+gap:20px;
+
+}
+
+
+.footer-info,
+.footer-links,
+.newsletter{
+
+flex:1 1 250px;
+
+}
+
+
+.footer-info h3,
+.footer-links h3,
+.newsletter h3{
+
+color:white;
+margin-bottom:15px;
+border-bottom:2px solid #009999;
+padding-bottom:8px;
+width:fit-content;
+
+}
+
+
+.footer-info p,
+.footer-links a{
+
+color:#ddd;
+text-decoration:none;
+line-height:1.8;
+
+}
+
+
+.footer-links ul{
+
+list-style:none;
+padding:0;
+
+}
+
+
+.footer-links li{
+
+margin-bottom:8px;
+
+}
+
+
+.newsletter input{
+
+padding:10px;
+width:70%;
+border:none;
+border-radius:4px 0 0 4px;
+
+}
+
+
+.newsletter button{
+
+padding:10px;
+background:#009999;
+color:white;
+border:none;
+border-radius:0 4px 4px 0;
+cursor:pointer;
+
+}
+
+
+.footer-bottom{
+
+background:#111;
+padding:15px;
+text-align:center;
+color:#aaa;
+font-size:.9em;
+
+}
+
+</style>
+
 </head>
+
+
 <body>
 
-    <!-- Header with Navigation -->
-    <header>
-        <div class="header-container">
-            <!-- Logo -->
-            <img src="logo.jpg" alt="Physio-Center Logo" class="site-logo" />
-            <!-- Title -->
-            <h1>PhysioCenter</h1>
-            <!-- Navigation Menu -->
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services main page.html">Services main page</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="dashboard-main">
-        <h2>Contact Us</h2>
-        <section class="content-wrapper">
-            <!-- Contact Form -->
-            <div>
-                <h3>Send us a message</h3>
-                <!-- Replace 'your-form-id' with your actual Formspree form ID -->
-                <form class="contact-form" action="https://formspree.io/f/your-form-id" method="post">
-                    <input type="text" name="name" placeholder="Name" required />
-                    <input type="email" name="email" placeholder="Email" required />
-                    <input type="tel" name="phone" placeholder="Phone" />
-                    <textarea rows="5" name="message" placeholder="Your message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
+<header>
 
-            <!-- Map & Details -->
-            <div>
-                <h3>Our Location</h3>
-                <!-- Embedded Google Map -->
-                <iframe src="https://maps.google.com" width="100%" height="250" style="border:0; border-radius: 8px; margin-bottom:15px;" allowfullscreen="" loading="lazy"></iframe>
-                <p><strong>Address:</strong> Nairobi - Mathare 4A</p>
-                <p><strong>Phone:</strong> +254 701396168</p>
-                <p><strong>Email:</strong> desmonopande@gmail.com</p>
-                
-                <h3 style="margin-top:20px;">Follow Us</h3>
-                <p>
-                    <a href="#" style="margin-right:15px; color: #3b5998;"><i class="fab fa-facebook fa-2x"></i></a>
-                    <a href="#" style="color: #c32aa3;"><i class="fab fa-instagram fa-2x"></i></a>
-                </p>
-            </div>
-        </section>
-    </main>
+<div class="header-container">
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-info">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-phone"></i> +254 701396168</p>
-                <p><i class="fas fa-envelope"></i> desmonopande@gmail.com</p>
-            </div>
-            
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services main page.html">Services main page</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <div class="newsletter">
-                <h3>Newsletter</h3>
-                <!-- Replace with your form endpoint if desired -->
-                <form style="display: flex;" action="https://formspree.io/f/your-form-id" method="post">
-                    <input type="email" name="subscriber_email" placeholder="Your email" required />
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Physiotherapy & Sports Injury Center. All rights reserved.</p>
-        </div>
-    </footer>
+
+<img src="logo.jpg" 
+alt="Physio-Center Logo" 
+class="site-logo">
+
+
+<h1>PhysioCenter</h1>
+
+
+<nav class="navbar">
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About Us</a></li>
+
+<li><a href="services main page.html">Services main page</a></li>
+
+<li><a href="contact.html">Contact Us</a></li>
+
+</ul>
+
+</nav>
+
+
+</div>
+
+</header>
+
+
+
+<main class="dashboard-main">
+
+
+<h2>Contact Us</h2>
+
+
+<section class="content-wrapper">
+
+
+<div>
+
+
+<h3>Send us a message</h3>
+
+
+<form class="contact-form"
+
+action="https://formspree.io/f/mgoglkdk"
+
+method="POST">
+
+
+<input 
+type="text"
+name="name"
+placeholder="Name"
+required>
+
+
+<input
+type="email"
+name="email"
+placeholder="Email"
+required>
+
+
+<input
+type="tel"
+name="phone"
+placeholder="Phone">
+
+
+<textarea
+rows="5"
+name="message"
+placeholder="Your message"
+required></textarea>
+
+
+<input 
+type="hidden"
+name="_subject"
+value="New Contact Message - PhysioCenter">
+
+
+<input
+type="hidden"
+name="_replyto"
+value="desmonopande@gmail.com">
+
+
+<button type="submit">
+Send Message
+</button>
+
+
+</form>
+
+
+</div>
+
+<!-- MAP & DETAILS -->
+
+<div>
+
+<h3>Our Location</h3>
+
+
+<iframe 
+src="https://www.google.com/maps?q=Nairobi%20Mathare%204A&output=embed"
+width="100%"
+height="250"
+style="border:0; border-radius:8px; margin-bottom:15px;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+
+<p style="margin-top:10px;">
+<strong>Address:</strong> Nairobi - Mathare 4A
+</p>
+
+
+<p>
+<strong>Phone:</strong> +254 701396168
+</p>
+
+
+<p>
+<strong>Email:</strong> desmonopande@gmail.com
+</p>
+
+
+
+<h3 style="margin-top:20px;">
+Follow Us
+</h3>
+
+
+<p>
+
+<a href="#" style="margin-right:15px; color:#3b5998;">
+<i class="fab fa-facebook fa-2x"></i>
+<p> @desmon_mjamo</p>
+</a> 
+
+<a href="#" style="color:#c32aa3;">
+<i class="fab fa-instagram fa-2x"></i>
+<p> @desmon_mjamo</p>
+</a>
+
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+
+<div class="footer-container">
+
+
+<div class="footer-info">
+
+<h3>
+Contact Us
+</h3>
+
+
+<p>
+<i class="fas fa-phone"></i>
++254 701396168
+</p>
+
+
+<p>
+<i class="fas fa-envelope"></i>
+desmonopande@gmail.com
+</p>
+
+
+</div>
+
+
+
+
+<div class="footer-links">
+
+
+<h3>
+Quick Links
+</h3>
+
+
+<ul>
+
+<li>
+<a href="about.html">
+About Us
+</a>
+</li>
+
+
+<li>
+<a href="services main page.html">
+Services main page
+</a>
+</li>
+
+
+<li>
+<a href="contact.html">
+Contact Us
+</a>
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+<div class="newsletter">
+
+
+<h3>
+Newsletter
+</h3>
+
+
+
+<form 
+style="display:flex;"
+action="https://formspree.io/f/mgoglkdk"
+method="POST">
+
+
+<input 
+type="email"
+name="subscriber_email"
+placeholder="Your email"
+required>
+
+
+
+<input
+type="hidden"
+name="_subject"
+value="New Newsletter Subscription - PhysioCenter">
+
+
+
+<button type="submit">
+Subscribe
+</button>
+
+
+</form>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="footer-bottom">
+
+
+<p>
+
+&copy; 2026 Physiotherapy & Sports Injury Center. All rights reserved.
+
+</p>
+
+
+</div>
+
+
+</footer>
+
+
 
 </body>
+
 </html>
